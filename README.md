@@ -2,7 +2,7 @@
 
 This repository contains computational tools supporting the paper:
 
-> **Prime Capacity in Legendre Intervals and Ultra-Rough Abundance**  
+> **Prime Capacity in Legendre Intervals: A Divisor Allocation Framework**  
 > *Michael M. Ross, February 2026*
 
 The scripts implement the small-prime sieve, survivor analysis, and
