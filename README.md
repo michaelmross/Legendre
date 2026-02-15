@@ -1,4 +1,4 @@
-# Legendre Interval DAM Toolkit (2026)
+# Legendre Interval DAM Toolkit
 
 This repository contains computational tools supporting the paper:
 
@@ -176,3 +176,7 @@ The computational workflow is:
 
 https://github.com/michaelmross/legendre
 
+## Contact
+
+- **Author**: Michael M. Ross
+- **Email**: michaelmross@gmail.com
