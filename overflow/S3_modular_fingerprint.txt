@@ -1,0 +1,124 @@
+Modular fingerprint computation
+Reproducing Table 3 of Ross (2026)
+==================================================
+
+B=7, M=primorial(7)=210
+Checking 210 residue classes...
+Primes precomputed: 82 total, 81 odd
+       10/210  (  4.8%)  min_margin=    36  failures=0
+       20/210  (  9.5%)  min_margin=    36  failures=0
+       30/210  ( 14.3%)  min_margin=    36  failures=0
+       40/210  ( 19.0%)  min_margin=    36  failures=0
+       50/210  ( 23.8%)  min_margin=    36  failures=0
+       60/210  ( 28.6%)  min_margin=    36  failures=0
+       70/210  ( 33.3%)  min_margin=    36  failures=0
+       80/210  ( 38.1%)  min_margin=    36  failures=0
+       90/210  ( 42.9%)  min_margin=    36  failures=0
+      100/210  ( 47.6%)  min_margin=    36  failures=0
+      110/210  ( 52.4%)  min_margin=    36  failures=0
+      120/210  ( 57.1%)  min_margin=    36  failures=0
+      130/210  ( 61.9%)  min_margin=    36  failures=0
+      140/210  ( 66.7%)  min_margin=    36  failures=0
+      150/210  ( 71.4%)  min_margin=    36  failures=0
+      160/210  ( 76.2%)  min_margin=    36  failures=0
+      170/210  ( 81.0%)  min_margin=    36  failures=0
+      180/210  ( 85.7%)  min_margin=    36  failures=0
+      190/210  ( 90.5%)  min_margin=    36  failures=0
+      200/210  ( 95.2%)  min_margin=    36  failures=0
+      210/210  (100.0%)  min_margin=    36  failures=0
+
+Min margin: 36 at r=3
+SUCCESS: All 210 residue classes have margin >= 1
+
+B=11, M=primorial(11)=2,310
+Checking 2,310 residue classes...
+Primes precomputed: 624 total, 623 odd
+      115/2310  (  5.0%)  min_margin=   274  failures=0
+      230/2310  ( 10.0%)  min_margin=   268  failures=0
+      345/2310  ( 14.9%)  min_margin=   268  failures=0
+      460/2310  ( 19.9%)  min_margin=   268  failures=0
+      575/2310  ( 24.9%)  min_margin=   268  failures=0
+      690/2310  ( 29.9%)  min_margin=   268  failures=0
+      805/2310  ( 34.8%)  min_margin=   268  failures=0
+      920/2310  ( 39.8%)  min_margin=   268  failures=0
+     1035/2310  ( 44.8%)  min_margin=   268  failures=0
+     1150/2310  ( 49.8%)  min_margin=   268  failures=0
+     1265/2310  ( 54.8%)  min_margin=   268  failures=0
+     1380/2310  ( 59.7%)  min_margin=   268  failures=0
+     1495/2310  ( 64.7%)  min_margin=   268  failures=0
+     1610/2310  ( 69.7%)  min_margin=   268  failures=0
+     1725/2310  ( 74.7%)  min_margin=   268  failures=0
+     1840/2310  ( 79.7%)  min_margin=   268  failures=0
+     1955/2310  ( 84.6%)  min_margin=   268  failures=0
+     2070/2310  ( 89.6%)  min_margin=   268  failures=0
+     2185/2310  ( 94.6%)  min_margin=   268  failures=0
+     2300/2310  ( 99.6%)  min_margin=   268  failures=0
+
+Min margin: 268 at r=146
+SUCCESS: All 2,310 residue classes have margin >= 1
+
+B=13, M=primorial(13)=30,030
+Checking 30,030 residue classes...
+Primes precomputed: 6062 total, 6061 odd
+     1501/30030  (  5.0%)  min_margin=  2821  failures=0
+     3002/30030  ( 10.0%)  min_margin=  2821  failures=0
+     4503/30030  ( 15.0%)  min_margin=  2821  failures=0
+     6004/30030  ( 20.0%)  min_margin=  2821  failures=0
+     7505/30030  ( 25.0%)  min_margin=  2821  failures=0
+     9006/30030  ( 30.0%)  min_margin=  2821  failures=0
+    10507/30030  ( 35.0%)  min_margin=  2821  failures=0
+    12008/30030  ( 40.0%)  min_margin=  2821  failures=0
+    13509/30030  ( 45.0%)  min_margin=  2821  failures=0
+    15010/30030  ( 50.0%)  min_margin=  2821  failures=0
+    16511/30030  ( 55.0%)  min_margin=  2821  failures=0
+    18012/30030  ( 60.0%)  min_margin=  2821  failures=0
+    19513/30030  ( 65.0%)  min_margin=  2821  failures=0
+    21014/30030  ( 70.0%)  min_margin=  2821  failures=0
+    22515/30030  ( 75.0%)  min_margin=  2821  failures=0
+    24016/30030  ( 80.0%)  min_margin=  2821  failures=0
+    25517/30030  ( 85.0%)  min_margin=  2821  failures=0
+    27018/30030  ( 90.0%)  min_margin=  2821  failures=0
+    28519/30030  ( 95.0%)  min_margin=  2821  failures=0
+    30020/30030  (100.0%)  min_margin=  2821  failures=0
+
+Min margin: 2821 at r=6
+SUCCESS: All 30,030 residue classes have margin >= 1
+
+B=17, M=primorial(17)=510,510
+Checking 510,510 residue classes...
+Primes precomputed: 80051 total, 80050 odd
+    25525/510510  (  5.0%)  min_margin= 38466  failures=0
+    51050/510510  ( 10.0%)  min_margin= 38466  failures=0
+    76575/510510  ( 15.0%)  min_margin= 38466  failures=0
+   102100/510510  ( 20.0%)  min_margin= 38466  failures=0
+   127625/510510  ( 25.0%)  min_margin= 38466  failures=0
+   153150/510510  ( 30.0%)  min_margin= 38466  failures=0
+   178675/510510  ( 35.0%)  min_margin= 38466  failures=0
+   204200/510510  ( 40.0%)  min_margin= 38466  failures=0
+   229725/510510  ( 45.0%)  min_margin= 38466  failures=0
+   255250/510510  ( 50.0%)  min_margin= 38466  failures=0
+   280775/510510  ( 55.0%)  min_margin= 38466  failures=0
+   306300/510510  ( 60.0%)  min_margin= 38466  failures=0
+   331825/510510  ( 65.0%)  min_margin= 38466  failures=0
+   357350/510510  ( 70.0%)  min_margin= 38466  failures=0
+   382875/510510  ( 75.0%)  min_margin= 38466  failures=0
+   408400/510510  ( 80.0%)  min_margin= 38466  failures=0
+   433925/510510  ( 85.0%)  min_margin= 38466  failures=0
+   459450/510510  ( 90.0%)  min_margin= 38466  failures=0
+   484975/510510  ( 95.0%)  min_margin= 38466  failures=0
+   510500/510510  (100.0%)  min_margin= 38466  failures=0
+
+Min margin: 38466 at r=215
+SUCCESS: All 510,510 residue classes have margin >= 1
+
+=================================================================
+TABLE 3 SUMMARY
+=================================================================
+   B           M     Classes    Min margin    Hard r
+-------------------------------------------------------
+   7         210         210            36         3  (---)
+  11       2,310       2,310           268       146  (x7.4)
+  13      30,030      30,030         2,821         6  (x10.5)
+  17     510,510     510,510        38,466       215  (x13.6)
+
+All levels: zero failures.
