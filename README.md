@@ -2,7 +2,7 @@
 
 Computational support for:
 
-**Eliminating Ultra-Rough Obstructions in Segmented Legendre Intervals**  
+**Eliminating the Parity Obstruction in a Quadratic Interval**  
 Michael M. Ross
 
 This repository contains a single script:
