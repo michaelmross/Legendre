@@ -3,7 +3,7 @@
 Computational support for:
 
 **Eliminating the Parity Obstruction in a Quadratic Interval**  
-Michael M. Ross
+Michael M. Ross, 2026
 
 *Zenodo Record:* [19207278](https://zenodo.org/records/19207278)
 
