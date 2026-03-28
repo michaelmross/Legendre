@@ -5,6 +5,8 @@ Computational support for:
 **Eliminating the Parity Obstruction in a Quadratic Interval**  
 Michael M. Ross
 
+*Zenodo Record:* [19207278](https://zenodo.org/records/19207278)
+
 This repository contains a single script:
 
     segmented_legendre_sieve.py
