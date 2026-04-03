@@ -37,4 +37,5 @@ Requires `numpy`.
 
 ## Author
 
-Michael Ross
+Michael M. Ross
+michaelmross@cantab.net
