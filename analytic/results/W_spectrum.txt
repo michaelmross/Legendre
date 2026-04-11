@@ -1,0 +1,32 @@
+python W_spectrum.py
+Computing |W_h(k;q)| for h=1, q=997, D=100, n=1000000, P(B)=210
+Effective sub-range cutoff: |k| <= q/D = 9
+
+Region            count   max          L1           L2
+-----------------------------------------------------------------
+|k| <= q/D         19   3.1601e-01   5.5117e+00   1.6071e+00
+|k| >  q/D        978   1.2163e+00   3.5523e+02   1.6463e+02
+
+L1 ratio (large / small): 64.45
+L2 ratio (large / small): 102.44
+
+==> Spectrum is NOT concentrated on the small-k subrange.
+    The complementary range carries more L2 mass.
+    This is the obstruction to off-the-shelf DI in Section 10.
+	
+	
+python W_spectrum.py --q 1009 --D 50
+Computing |W_h(k;q)| for h=1, q=1009, D=50, n=1000000, P(B)=210
+Effective sub-range cutoff: |k| <= q/D = 20
+
+Region            count   max          L1           L2
+-----------------------------------------------------------------
+|k| <= q/D         41   3.1588e-01   1.1838e+01   3.4281e+00
+|k| >  q/D        968   1.1999e+00   3.5072e+02   1.6110e+02
+
+L1 ratio (large / small): 29.63
+L2 ratio (large / small): 46.99
+
+==> Spectrum is NOT concentrated on the small-k subrange.
+    The complementary range carries more L2 mass.
+    This is the obstruction to off-the-shelf DI in Section 10.

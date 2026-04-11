@@ -1,0 +1,17 @@
+python bilinear_exact_real.py --Q-list 100 300 1000 --n-list 10000 100000 1000000 --D 20
+Running experiments...
+
+Q=    100 n=     10000 D= 20  L1*logn/n=0.02033  L2_off/L2_diag=-0.269  Lmax*logn/n=0.0026  t=0.00s
+Q=    300 n=     10000 D= 20  L1*logn/n=0.04193  L2_off/L2_diag=-0.317  Lmax*logn/n=0.0025  t=0.00s
+Q=   1000 n=     10000 D= 20  L1*logn/n=0.10426  L2_off/L2_diag=-0.468  Lmax*logn/n=0.0033  t=0.00s
+Q=    100 n=    100000 D= 20  L1*logn/n=0.00219  L2_off/L2_diag=-0.345  Lmax*logn/n=0.0004  t=0.00s
+Q=    300 n=    100000 D= 20  L1*logn/n=0.00380  L2_off/L2_diag=-0.579  Lmax*logn/n=0.0003  t=0.00s
+Q=   1000 n=    100000 D= 20  L1*logn/n=0.01421  L2_off/L2_diag=-0.443  Lmax*logn/n=0.0004  t=0.00s
+Q=    100 n=   1000000 D= 20  L1*logn/n=0.00020  L2_off/L2_diag=-0.636  Lmax*logn/n=0.0000  t=0.00s
+Q=    300 n=   1000000 D= 20  L1*logn/n=0.00061  L2_off/L2_diag=-0.318  Lmax*logn/n=0.0000  t=0.00s
+Q=   1000 n=   1000000 D= 20  L1*logn/n=0.00177  L2_off/L2_diag=-0.359  Lmax*logn/n=0.0001  t=0.00s
+
+Wrote bilinear_exact_real_results.csv
+
+Hypothesis 1: L1_logn_over_n should be bounded, ideally decreasing in n.
+For context: python3 bilinear_exact_real.py --help-math
