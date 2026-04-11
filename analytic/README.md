@@ -1,4 +1,4 @@
-# primes-square-intervals
+# Primes in Square Intervals
 
 Companion code to
 
