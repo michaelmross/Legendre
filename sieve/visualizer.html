@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCS Level of Distribution Simulator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; }
+        .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+        .control-group { display: flex; flex-direction: column; }
+        label { font-weight: bold; margin-bottom: 8px; }
+        input[type="range"] { cursor: pointer; }
+        .status-card { text-align: center; padding: 20px; border-radius: 8px; margin-bottom: 30px; transition: background 0.3s; }
+        .status-viable { background: #d4edda; color: #155724; border: 2px solid #c3e6cb; }
+        .status-conditional { background: #fff3cd; color: #856404; border: 2px solid #ffeeba; }
+        .status-failed { background: #f8d7da; color: #721c24; border: 2px solid #f5c6cb; }
+        #statusText { font-size: 1.4rem; font-weight: bold; }
+        #statusSubtext { font-size: 0.9rem; margin-top: 5px; }
+        canvas { max-height: 400px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Multiplicity-Corrected Sieve (MCS) Simulator</h1>
+    
+    <div id="statusCard" class="status-card status-viable">
+        <div id="statusText">Unconditional Proof Viable</div>
+        <div id="statusSubtext">Support restricted to D &le; L<sup>0.5</sup> with positive net bound.</div>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="thetaSlider">Level of Distribution (θ): <span id="thetaVal">0.50</span></label>
+            <input type="range" id="thetaSlider" min="0.1" max="1.0" step="0.01" value="0.50">
+        </div>
+        <div class="control-group">
+            <label for="kappaSlider">MCS Multiplier (κ): <span id="kappaVal">6.76</span></label>
+            <input type="range" id="kappaSlider" min="1.0" max="10.0" step="0.1" value="6.76">
+        </div>
+        <div class="control-group">
+            <label for="lInput">Interval Length (L):</label>
+            <input type="number" id="lInput" value="4324">
+        </div>
+        <div class="control-group">
+            <label>Current Error |E| ≈ L<sup>θ</sup>:</label>
+            <div id="errorDisplay">65.76</div>
+        </div>
+    </div>
+
+    <canvas id="survivalChart"></canvas>
+</div>
+
+<script>
+    const ctx = document.getElementById('survivalChart').getContext('2d');
+    const thetaSlider = document.getElementById('thetaSlider');
+    const kappaSlider = document.getElementById('kappaSlider');
+    const lInput = document.getElementById('lInput');
+    const statusCard = document.getElementById('statusCard');
+    const statusText = document.getElementById('statusText');
+    const statusSubtext = document.getElementById('statusSubtext');
+
+    let chart;
+
+    function calculateData() {
+        const theta = parseFloat(thetaSlider.value);
+        const kappa = parseFloat(kappaSlider.value);
+        const L = parseFloat(lInput.value);
+        const baseMass = 113.66;
+
+        document.getElementById('thetaVal').innerText = theta.toFixed(2);
+        document.getElementById('kappaVal').innerText = kappa.toFixed(2);
+        
+        const error = Math.pow(L, theta);
+        document.getElementById('errorDisplay').innerText = error.toFixed(2);
+
+        // Mapping logic: Standard Main Term drops to 0 at theta=0.5
+        const mainStandard = baseMass * (2 * theta - 1);
+        // MCS Main Term decays slower due to density correction
+        const mainMCS = (baseMass * kappa) * (1.5 * theta - 0.25);
+
+        const netStandard = mainStandard - error;
+        const netMCS = mainMCS - error;
+
+        // Update Status Card
+        if (theta > 0.5) {
+            statusCard.className = 'status-card status-conditional';
+            statusText.innerText = 'Conditional Proof';
+            statusSubtext.innerText = 'Requires distributional hypothesis for D > L^0.5';
+        } else if (netMCS > 0) {
+            statusCard.className = 'status-card status-viable';
+            statusText.innerText = 'Unconditional Proof Viable';
+            statusSubtext.innerText = 'Net lower bound is positive within safe sifting zone.';
+        } else {
+            statusCard.className = 'status-card status-failed';
+            statusText.innerText = 'Lower Bound Failed';
+            statusSubtext.innerText = 'Main term mass insufficient to overcome error.';
+        }
+
+        return { theta, netStandard, netMCS };
+    }
+
+    function updateChart() {
+        const { theta, netStandard, netMCS } = calculateData();
+        
+        const labels = [];
+        const stdData = [];
+        const mcsData = [];
+        const lVal = parseFloat(lInput.value);
+        const kappa = parseFloat(kappaSlider.value);
+        const baseMass = 113.66;
+
+        for (let t = 0.1; t <= 1.0; t += 0.05) {
+            labels.push(t.toFixed(2));
+            const err = Math.pow(lVal, t);
+            stdData.push(baseMass * (2 * t - 1) - err);
+            mcsData.push((baseMass * kappa) * (1.5 * t - 0.25) - err);
+        }
+
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = stdData;
+        chart.data.datasets[1].data = mcsData;
+        chart.update();
+    }
+
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Net Standard Bound',
+                borderColor: '#3498db',
+                data: [],
+                fill: false
+            }, {
+                label: 'Net MCS Bound',
+                borderColor: '#2ecc71',
+                data: [],
+                fill: false,
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                x: { title: { display: true, text: 'Level of Distribution (θ)' } },
+                y: { title: { display: true, text: 'Net Lower Bound' } }
+            },
+            plugins: {
+                annotation: { // Conceptual highlight of safe zone
+                    annotations: {
+                        line1: { type: 'line', xMin: '0.50', xMax: '0.50', borderColor: 'red', borderWidth: 2 }
+                    }
+                }
+            }
+        }
+    });
+
+    [thetaSlider, kappaSlider, lInput].forEach(el => el.addEventListener('input', updateChart));
+    updateChart();
+</script>
+
+</body>
+</html>
