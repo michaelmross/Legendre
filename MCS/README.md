@@ -2,6 +2,8 @@
 
 This repository contains the computational framework and Linear Programming (LP) solvers used to demonstrate the **Multiplicity-Corrected Sieve (MCS)**. This research identifies a structural "Deterministic Zone" in quadratic intervals to unconditionally establish positive lower bounds for prime distribution.
 
+[Multiplicity-Corrected Sieve (MCS) Simulator](https://github.com/michaelmross/Legendre/tree/main/MCS/visualizer.html)
+
 ## Overview
 
 Classical linear sieves are often limited by the "parity problem," requiring unproven levels of distribution (e.g., $L^2$) to prove the existence of primes in short intervals. The MCS bypasses this by correcting the density function $g(p)$ for primes exceeding half the interval length ($p > L/2$).
