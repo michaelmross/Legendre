@@ -21,7 +21,7 @@ The primary engine used to find optimal sieve weights $\lambda_d$. It demonstrat
 Implements a modified Rosser-Iwaniec Buchstab split to test the survival of the main term during iteration. It compares the expected survivors against the "geometric tail" of semiprimes.
 
 ### 3. `linear_sieve_analysis.py` (Weight Extraction)
-A diagnostic tool used to extract and visualize the exact algebraic deformation the solver used to achieve the optimized results.
+A diagnostic tool to extract and visualize the exact algebraic deformation the solver used to achieve the optimized results.
 
 ## Getting Started
 
