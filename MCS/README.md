@@ -1,27 +1,27 @@
-# Multiplicity-Corrected Sieve (MCS) for Legendre’s Conjecture
+# The Parity Barrier in Legendre's Interval: Multiplicity-Corrected Sieve (MCS)
 
-This repository contains the computational framework and Linear Programming (LP) solvers used to demonstrate the **Multiplicity-Corrected Sieve (MCS)**. This research identifies a structural "Deterministic Zone" in quadratic intervals to unconditionally establish positive lower bounds for prime distribution.
-
-<a href="https://naturalnumbers.org/MCS-simulator.html" target="_blank">Multiplicity-Corrected Sieve (MCS) Simulator</a>
+This repository contains the computational framework and Linear Programming (LP) solvers used to mathematically map the boundaries of Selberg's parity obstruction within the highly restricted quadratic interval $J_n = [4n^2-n, 4n^2+n]$. 
 
 ## Overview
 
-Classical linear sieves are often limited by the "parity problem," requiring unproven levels of distribution (e.g., $L^2$) to prove the existence of primes in short intervals. The MCS bypasses this by correcting the density function $g(p)$ for primes exceeding half the interval length ($p > L/2$).
+Classical linear sieves are fundamentally limited by the parity problem when attempting to prove the existence of primes in short intervals. This repository demonstrates exactly *why* this barrier is insurmountable for linear sieves, even in an interval geometrically structured to exclude ultra-rough semiprimes. 
+
+By introducing a "Deterministic Zone" for primes exceeding half the interval length ($p > n$) and correcting the density function to $g(p) = 2n/p^2$, we calculate a massive theoretical main-term surplus. However, this framework computationally proves that translating this geometric surplus back to the discrete arithmetic integers invariably causes the remainder term to explode.
 
 ### Key Findings
-* **The 7x Multiplier:** By accounting for local multiplicity constraints ($g(p) = L/p^2$), the LP solver identifies a density reservoir nearly seven times larger than standard sieve models (769.14 vs 113.66).
-* **Unconditional Convergence:** The massive density surplus allows for a strict truncation of the sieve support to the unconditionally safe regime ($D \le L^{1/2-\epsilon}$) while maintaining a positive lower bound.
+* **The 6.7x Multiplier:** By optimizing the sieve weights for local continuous multiplicity constraints, the LP solver identifies a theoretical density reservoir nearly 6.7 times larger than classical uniform sieve models.
+* **The Translation Gap (Parity Barrier):** While the continuous geometric model produces a massive main-term surplus, applying these exact, geometrically optimized weights to the fractional parts of the discrete arithmetic grid explicitly triggers the parity obstruction, destroying the unconditional remainder bounds.
 
 ## Core Scripts
 
 ### 1. `linear_sieve.py` (LP Optimization)
-The primary engine used to find optimal sieve weights $\lambda_d$. It demonstrates how the "weight deformation" at the $p > L/2$ threshold prevents the main term from being crushed by the parity problem.
+The primary engine used to find the theoretically optimal sieve weights $\lambda_d$. It calculates the massive geometric surplus, but serves as proof that this surplus is mathematically isolated from the discrete grid.
 
-### 2. `ri_buchstab_split.py` (Convergence Test)
-Implements a modified Rosser-Iwaniec Buchstab split to test the survival of the main term during iteration. It compares the expected survivors against the "geometric tail" of semiprimes.
+### 2. `linear_sieve_analysis.py` (Weight Extraction)
+A diagnostic tool used to extract and visualize the exact combinatorial deformation the solver used. It demonstrates how the structural DNA of the weights violently resonates with the discrete fractional parts, causing the classical bounds on the remainder term to explode.
 
-### 3. `linear_sieve_analysis.py` (Weight Extraction)
-A diagnostic tool to extract and visualize the exact algebraic deformation the solver used to achieve the optimized results.
+### 3. `ri_buchstab_split.py` (The Geometric Tail)
+Implements a modified Rosser-Iwaniec Buchstab split. It performs a discrete combinatorial count to verify that the "density leak" calculated in the continuous integral perfectly matches the discrete tail of semiprimes within the $J_n$ interval.
 
 ## Getting Started
 
@@ -31,11 +31,6 @@ A diagnostic tool to extract and visualize the exact algebraic deformation the s
 * SciPy (for the `highs` dual-simplex solver)
 
 ### Usage
-To replicate the 7x multiplier result:
-\`\`\`bash
+To execute the optimization engine and view the theoretical main-term surplus:
+```bash
 python linear_sieve.py
-\`\`\`
-
-## Citation
-If using this framework in academic research, please cite the associated manuscript:
-*Ross, M. M. (2026). The Multiplicity-Corrected Sieve: An Unconditional Path to Legendre’s Conjecture.*
