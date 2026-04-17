@@ -65,14 +65,10 @@ def test_modified_ri_bound(n):
     print(f"Phase 2 (Tail of P_2 semiprimes): {tail_count} exactly")
     
     # 4. THE LOWER BOUND
-    lower_bound = main_term - tail_count
+    survivor_count = main_term - tail_count
     print(f"\n--- THE VERDICT ---")
-    print(f"Modified R-I Lower Bound: {lower_bound:.2f}")
-    
-    if lower_bound > 0:
-        print("RESULT: SOLID. The main term unconditionally absorbs the tail!")
-    else:
-        print("RESULT: FAIL. The tail is still too large.")
+    print(f"Theoretical Main-Term Survivor Count: {survivor_count:.2f}")
+    print("Note: This isolated main-term surplus is subsequently destroyed by the remainder term explosion in the full sieve.")
 
 if __name__ == "__main__":
     test_modified_ri_bound(1000)

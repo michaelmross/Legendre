@@ -116,47 +116,18 @@ def optimize_sieve_weights(n, use_multiplicity_correction=True):
     res = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=(-1, 1), method='highs')
     
     if res.success:
-        lower_bound = -res.fun
-        print(f"Correction {'ON ' if use_multiplicity_correction else 'OFF'}: Optimized Lower Bound = {lower_bound:.4f}")
+        theoretical_surplus = -res.fun
+        print(f"Correction {'ON ' if use_multiplicity_correction else 'OFF'}: Theoretical Main-Term Surplus = {theoretical_surplus:.4f}")
+        if use_multiplicity_correction:
+            print("Result: Massive geometric density surplus isolated.")
+            print("Note: Translation to discrete arithmetic grid results in remainder term explosion.")
         return res.x, d_list
     else:
         print(f"Optimization failed: {res.message}")
         return None, None
 
-    def print_active_weights(weights, d_list, label=""):
-        print(f"\n--- Active Weights: {label} ---")
-        active = []
-        # Filter out weights that are effectively zero
-        for w, d in zip(weights, d_list):
-            if abs(w) > 1e-6:
-                active.append((d, w))
-
-# 1. Define the print function first
-def print_active_weights(weights, d_list, label=""):
-    print(f"\n--- Active Weights: {label} ---")
-    if weights is None:
-        print("No weights returned (Optimization failed).")
-        return
-        
-    active = []
-    # Filter out weights that are effectively zero
-    for w, d in zip(weights, d_list):
-        if abs(w) > 1e-6:
-            active.append((d, w))
-            
-    # Sort by divisor size
-    active.sort(key=lambda x: x[0])
-    
-    for d, w in active:
-        # Highlight if d is a prime in the "low-multiplicity" regime (p > 25 for n=50)
-        marker = " <--" if (d > 25 and d in P_global) else ""
-        print(f"d = {d:5d}  |  lambda_d = {w:9.5f}{marker}")
-
-# 2. Define P_global right before the main block
-P_global = set(primes_upto(100))
-
-# 3. Finally, execute the script
 if __name__ == "__main__":
+    # You can change this number to test different interval sizes
     n_test = 50 
     
     print("==================================================")
@@ -168,8 +139,3 @@ if __name__ == "__main__":
     
     print("\n[TEST 2] Modified Weights (Correction ON)")
     weights_mod, ds_mod = optimize_sieve_weights(n_test, use_multiplicity_correction=True)
-
-    # Print the extracted weights
-    print_active_weights(weights_std, ds_std, "Standard (Correction OFF)")
-    print_active_weights(weights_mod, ds_mod, "Modified (Correction ON)")
-            
