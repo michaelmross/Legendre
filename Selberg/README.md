@@ -41,7 +41,7 @@ This is the natural extension if the BDH-shape stratification is to be written u
 
 ## Resolution for the parity paper
 
-The 1Q hypothesis in *Eliminating the Parity Obstruction in a Quadratic Interval* is stated about indicator counts $S(B; r_q, q) = \#\{k \in \mathcal{S}(B) : k \equiv a \pmod q\}$ — a cardinality, not a weighted sum. The investigation here resolves which empirical quantity to plot against the hypothesis bound:
+The 1Q hypothesis in *Eliminating the Parity Obstruction in a Quadratic Interval* is stated about indicator counts S(B; r_q, q) = \#\{k \in \mathcal{S}(B) : k \equiv a \pmod q\} — a cardinality, not a weighted sum. The investigation here resolves which empirical quantity to plot against the hypothesis bound:
 
 1. With **indicator-rough** as the weight, $T/S^2 \sim (\log n)^c / n$, decaying. This is what calibrates the hypothesis cleanly and is what appears in §2.6 / Table 2 of the paper.
 2. With **Selberg upper-bound weights**, $T/S^2 \sim \log n$, growing. This measures the variance of the upper bound itself — a structural property of the Selberg quadratic form rather than the prime distribution.
