@@ -61,4 +61,4 @@ The first command takes ~90 minutes and produces `exp_R_selberg_AP_results.json`
 
 ## Reference
 
-Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [10.5281/zenodo.19207278](https://doi.org/10.5281/zenodo.19207278)
+Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [10.5281/zenodo.19986694](https://doi.org/10.5281/zenodo.19986694)
