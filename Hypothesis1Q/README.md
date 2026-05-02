@@ -1,5 +1,9 @@
 # Hypothesis 1Q — Empirical Calibration
 
+## Reference
+
+Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [10.5281/zenodo.19986694](https://doi.org/10.5281/zenodo.19986694)
+
 Numerical experiments calibrating the quadratic-class L² level-of-distribution hypothesis (Hypothesis 1Q) for the sifted offset set $\mathcal{S}(B) = \{k \in [-n,n] : (4n^2+k,\, P(B)) = 1\}$ in the negative-square residue class $k \equiv -(2n)^2 \pmod q$.
 
 The arc reaches the data shown in **Table 2 of the parity paper**, *Eliminating the Parity Obstruction in a Quadratic Interval*, §2.6 ("Numerical calibration").
@@ -46,6 +50,4 @@ Approximate run times on a single core:
 
 Scales below $n = 10^4$ run in seconds to minutes. The scripts save results incrementally as JSON; partial completions can be resumed by editing the scale list at the top of each script.
 
-## Reference
 
-Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [10.5281/zenodo.19986694](https://doi.org/10.5281/zenodo.19986694)
