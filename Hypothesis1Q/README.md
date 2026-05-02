@@ -48,4 +48,4 @@ Scales below $n = 10^4$ run in seconds to minutes. The scripts save results incr
 
 ## Reference
 
-Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [10.5281/zenodo.19207278](https://doi.org/10.5281/zenodo.19207278)
+Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [10.5281/zenodo.19986694](https://doi.org/10.5281/zenodo.19986694)
