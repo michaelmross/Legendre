@@ -2,6 +2,10 @@
 
 This repository contains the computational framework and Linear Programming (LP) solvers used to mathematically map the boundaries of Selberg's parity obstruction within the highly restricted quadratic interval $J_n = [4n^2-n, 4n^2+n]$. 
 
+## Reference
+
+Ross, M.M., *A Multiplicity-Corrected Legendre Sieve for Primes in Consecutive Square Intervals*, preprint, Zenodo (2026). DOI: [19416766](https://doi.org/10.5281/zenodo.19416766)
+
 ## Overview
 
 Classical linear sieves are fundamentally limited by the parity problem when attempting to prove the existence of primes in short intervals. This repository demonstrates exactly *why* this barrier is insurmountable for linear sieves, even in an interval geometrically structured to exclude ultra-rough semiprimes. 
