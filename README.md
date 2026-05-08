@@ -6,6 +6,8 @@ Computational support for:
 
 Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [19986694](https://doi.org/10.5281/zenodo.19986694)
 
+More experiments in [Legendre/Hypothesis1Q](https://github.com/michaelmross/Legendre/tree/main/Hypothesis1Q).
+
 This repository contains a single script:
 
     segmented_legendre_sieve.py
