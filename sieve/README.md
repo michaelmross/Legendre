@@ -32,14 +32,7 @@ Computed across six orders of magnitude ($n = 10^3$ to $10^9$):
 python modified_legendre_sieve.py               # default: n up to 10^6
 python modified_legendre_sieve.py --limit 10000  # n up to 10^4
 ```
-
 Requires `numpy`.
-
-## Files
-
-- `modified_legendre_sieve.py` — computation script
-- `modified_legendre.tex` — paper (LaTeX source)
-- `modified_legendre.pdf` — compiled paper
 
 ## Author
 
