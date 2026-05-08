@@ -2,6 +2,8 @@
 
 A multiplicity-corrected Legendre sieve for estimating the number of primes in consecutive square intervals $I_n = [n^2, (n+1)^2]$.
 
+More experiments in [MCS] (https://github.com/michaelmross/Legendre/tree/main/MCS)
+
 ## The idea
 
 The standard Legendre sieve estimates the prime count by iteratively removing the fraction $1/p$ for each prime $p$. This works well when the interval contains many multiples of $p$, but for primes $p > d/2$ (where $d = 2n+1$ is the interval length), at most one multiple of $p$ falls in the interval. The **modified estimate** replaces the removal factor:
