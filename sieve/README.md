@@ -2,7 +2,7 @@
 
 A multiplicity-corrected Legendre sieve for estimating the number of primes in consecutive square intervals $I_n = [n^2, (n+1)^2]$.
 
-More experiments in [MCS] (https://github.com/michaelmross/Legendre/tree/main/MCS)
+More experiments in [MCS](https://github.com/michaelmross/Legendre/tree/main/MCS)
 
 ## The idea
 
