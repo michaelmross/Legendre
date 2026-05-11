@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 from sympy import isprime, primerange
 from collections import Counter
 
-OUT = '/home/claude'
 
 def count_multiples(low, high, p):
     return high // p - (low - 1) // p
@@ -70,7 +69,7 @@ ax.set_title('Factor rays with Legendre bands $[m^2, (m+1)^2-1]$ and parabola $n
 ax.legend(loc='upper right')
 ax.grid(True, alpha=0.25)
 plt.tight_layout()
-plt.savefig(f'{OUT}/exp_A_chart.png', dpi=120, bbox_inches='tight')
+plt.savefig(f'exp_A_chart.png', dpi=120, bbox_inches='tight')
 plt.close()
 print("[A] saved augmented chart")
 
@@ -110,7 +109,7 @@ for idx, m_band in enumerate([10, 30, 100, 300]):
 plt.suptitle("Multiplicity transition: $d_{m'}$ vs ray slope, three regimes visible",
              fontsize=13)
 plt.tight_layout()
-plt.savefig(f'{OUT}/exp_B_multiplicity.png', dpi=120, bbox_inches='tight')
+plt.savefig(f'exp_B_multiplicity.png', dpi=120, bbox_inches='tight')
 plt.close()
 print("[B] saved multiplicity transition")
 
@@ -192,7 +191,7 @@ ax.set_title('Multiplicity-correction ratio by prime regime')
 ax.legend(fontsize=9); ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig(f'{OUT}/exp_C_weights.png', dpi=120, bbox_inches='tight')
+plt.savefig(f'exp_C_weights.png', dpi=120, bbox_inches='tight')
 plt.close()
 print("[C] saved weight comparison")
 
@@ -253,7 +252,7 @@ ax.set_title(r'$d_p$ histogram by prime regime, $J_{500}$')
 ax.legend(fontsize=9); ax.grid(True, alpha=0.3, axis='y')
 
 plt.tight_layout()
-plt.savefig(f'{OUT}/exp_D_single_crossing.png', dpi=120, bbox_inches='tight')
+plt.savefig(f'exp_D_single_crossing.png', dpi=120, bbox_inches='tight')
 plt.close()
 print("[D] saved single-crossing histogram")
 
