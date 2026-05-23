@@ -4,7 +4,6 @@ shadow_analysis.py
 ==================
 
 Self-contained analysis tooling for the parity-breaking shadow sieve.
-Bundles everything we built in the session of 2026-05-21:
 
   - sieve primitives (primes_upto, B-rough tester)
   - generalized interval diagnostic (any [low, high], any B)
@@ -13,10 +12,6 @@ Bundles everything we built in the session of 2026-05-21:
   - rigorous UB on H_B via inner Selberg, summed over u
   - linear-sieve f(s) for the outer LB on |A_B|
 
-Open work for next session:
-  - rigorous LB on collisions (count of N in J_n with P^-(N) > B and Omega(N) >= 3),
-    to replace UB(|C|) <- UB(H) with UB(|C|) <- UB(H) - LB(collisions)
-  - rerun at half-width h = m (full Legendre interval) as a sanity check
 """
 
 from __future__ import annotations
