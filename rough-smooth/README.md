@@ -1,6 +1,6 @@
 # rough-smooth
 
-Code and data for *Rough and Smooth Numbers in a Square-Centered Interval:
+Code for *Rough and Smooth Numbers in a Square-Centered Interval:
 First-Order Structure and Second-Order Genericity* (M. M. Ross).
 
 The paper studies the populations of rough and smooth integers in the
