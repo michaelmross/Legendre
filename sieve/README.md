@@ -66,7 +66,7 @@ concatenated; equalize $b^2 - a^2$, not $b - a$, when carving pieces.
 
 ## Headline results
 
-$E(d)$ exceeds $\pi(I_n)$ **in the mean** beyond $n \approx 4{\times}10^3$
+$E(d)$ exceeds $\pi(I_n)$ _in the mean_ beyond $n \approx 4{\times}10^3$
 but is not a pointwise upper bound; the last observed violation is
 $n = 77{,}433$ (conjecturally the last ever). Both $E(d)$ and $L(d)$
 share the asymptotic ratio $e^{\gamma}/2 \approx 0.891$; the mean ratio
