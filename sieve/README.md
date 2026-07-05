@@ -58,7 +58,7 @@ concatenated; equalize $b^2 - a^2$, not $b - a$, when carving pieces.
 
 - `violation_census.csv` — the complete set of pointwise violations
   $\pi(I_n) > E(d)$ for $3 \le n \le 250{,}000$: exactly 7,543 values of
-  $n$, from 32 to **77,433**, with none in the 172,567 intervals beyond.
+  $n$, from 32 to 77,433, with none in the 172,567 intervals beyond.
   Columns: `n, pi, E_mod`.
 - `per_interval_windows.csv` — per-interval values from the window run to
   $n = 10^9$ (431 intervals). At $n = 10^9$: $\pi(I_n) = 48{,}254{,}877$,
