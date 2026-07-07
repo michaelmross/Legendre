@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fm_exact.py -- Exact certification of the tail level profile
+fm_exact.py -- Exact certification of the level profile for the tail sieve:
               zeta(gamma) = (6 - 5*gamma)/4  on  gamma in [1, 6/5]
 
 Companion to:
