@@ -29,7 +29,7 @@ race threshold of the paper's Theorem B is `θ** = 0.939305…`.
 | File | Role |
 |---|---|
 | `fm_exact.py` | The certification: 216 failure polytopes per slice and piece type, minimal witness level by exhaustive vertex enumeration over ℚ (`fractions.Fraction` throughout; no floating point in the certification). |
-| `constraint-inventory.pdf` / `.tex` | The full constraint inventory: derives every inequality in the script from the published theorem it encodes (Robert–Sargos Thm 1; van der Corput / Kuzmin–Landau; Fouvry–Iwaniec Thm 6 with the pruning lemma), states the reading conventions for the code's coefficient tuples, documents three deliberate relaxations in the encoding, and proves soundness by a sandwich against the paper's Coverage Lemma (§7). |
+| `constraint-inventory.pdf` | The full constraint inventory: derives every inequality in the script from the published theorem it encodes (Robert–Sargos Thm 1; van der Corput / Kuzmin–Landau; Fouvry–Iwaniec Thm 6 with the pruning lemma), states the reading conventions for the code's coefficient tuples, documents three deliberate relaxations in the encoding, and proves soundness by a sandwich against the paper's Coverage Lemma (§7). |
 
 ## Quick start
 
