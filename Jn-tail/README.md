@@ -5,6 +5,8 @@ Computational companion to:
 > M. M. Ross, *A One-Hypothesis Reduction for Primes in [4n²−n, 4n²+n]*,
 > Zenodo (2026), [doi:10.5281/zenodo.19441879](https://doi.org/10.5281/zenodo.19441879)
 
+[![DOI](https://zenodo.org/badge/1157196016.svg)](https://doi.org/10.5281/zenodo.21542734)
+
 The paper proves an unconditional bound for the semiprime tail of the
 Buchstab decomposition in the square-centered interval
 `J_n = [4n²−n, 4n²+n]`, by running the linear sieve over the bound
