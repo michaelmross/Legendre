@@ -1,6 +1,8 @@
 # Factor-Ray Experiments
 
-Computational companion to *Factor Rays and the Self-Conjugate Parabola: Deterministic Coverage Geometry in Square Intervals* (Ross, 2026). The script `factor_ray_experiments.py` produces four figures that visualize and empirically check the structural claims of §2, §3, and §5 of the paper.
+Computational companion to [*Factor Rays and the Self-Conjugate Parabola: Deterministic Coverage Geometry in Square Intervals*](https://doi.org/10.5281/zenodo.20016398) (Ross, M. M., 2026). 
+
+The script `factor_ray_experiments.py` produces four figures that visualize and empirically check the structural claims of §2, §3, and §5 of the paper.
 
 ## Files
 
