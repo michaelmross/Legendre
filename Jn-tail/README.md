@@ -7,7 +7,7 @@ Computational and documentation companion to [*A One-Hypothesis Reduction for Pr
 The paper proves an unconditional bound for the semiprime tail of the
 Buchstab decomposition in the square-centered interval
 `J_n = [4n²−n, 4n²+n]`, by running the linear sieve over the bound
-cofactors at a level of distribution `N^ζ(a)` against prime moduli
+cofactors at a sieve level `N^ζ(a)` against a prime block
 `p ≍ N^(2−a)`, with `N = 2n`. This repository certifies, in exact rational
 arithmetic, that the level profile of that tail sieve,
 
