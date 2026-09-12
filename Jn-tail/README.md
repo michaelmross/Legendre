@@ -79,6 +79,6 @@ single block a genuinely new trilinear estimate would have to improve.
 
 ## License
 
-Code and documents © Michael M. Ross; see [repository license file](https://github.com/michaelmross/Legendre/blob/main/LICENSE.md)
+Code and documents © Michael M. Ross; see [repository license file](https://github.com/michaelmross/Legendre/blob/main/LICENSE.md).
 
 mailto:michaelmross@cantab.net · https://michaelmross.github.io
