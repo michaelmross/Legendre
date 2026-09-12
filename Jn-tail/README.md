@@ -77,8 +77,10 @@ at `P^(1/3)`, Iwaniec's factorable sieve weights). The profile is a
 floor on the truth and a ceiling on this method; the witness names the
 single block a genuinely new trilinear estimate would have to improve.
 
-## MIT License
+## Citation and license
 
-Code and documents © Michael M. Ross; see [repository license file](https://github.com/michaelmross/Legendre/blob/main/LICENSE.md).
+Code: MIT. Note and data: CC-BY 4.0. [Repository license file](https://github.com/michaelmross/Legendre/blob/main/LICENSE.md).
 
-mailto:michaelmross@cantab.net · https://michaelmross.github.io
+If you use this work, cite the Zenodo records (DOI:https:10.5281/zenodo.19441879) and (DOI:10.5281/zenodo.21542734).
+
+michaelmross@cantab.net · https://michaelmross.github.io
