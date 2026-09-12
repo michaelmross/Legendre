@@ -1,6 +1,10 @@
 ***
 ## CODE LICENSE: MIT License
 
+Applies to the content of code files.
+
+MIT License
+
 Copyright (c) 2026 Michael M. Ross
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,6 +27,8 @@ SOFTWARE.
 
 ***
 ## DOCUMENTATION, FIGURES & DATA LICENSE: CC BY 4.0
+
+Applies to everything apart from code files.
 
 The text, notes, figures, and data in this repository are licensed under
 the Creative Commons Attribution 4.0 International License (CC BY 4.0).
