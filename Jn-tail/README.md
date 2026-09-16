@@ -1,6 +1,6 @@
 # Exact certification of the level profile ζ(a) = (5a−4)/4
 
-Computational and documentation companion to [*A One-Hypothesis Reduction for Primes in [4n²−n, 4n²+n]*](https://doi.org/10.5281/zenodo.19441879) (Ross, M. M., 2026)
+Computational and documentation companion to [*An Explicit Semiprime-Tail Bound in Square-Root Intervals and a One-Hypothesis Reduction for Primes in [4n²−n, 4n²+n]*](https://doi.org/10.5281/zenodo.19441879) (Ross, M. M., 2026)
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21542734-blue.svg)](https://doi.org/10.5281/zenodo.21542734)
 
