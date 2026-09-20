@@ -4,7 +4,8 @@ fm_exact.py -- Exact certification of the level profile for the tail sieve:
               zeta(gamma) = (6 - 5*gamma)/4  on  gamma in [1, 6/5]
 
 Companion to:
-  M. M. Ross, "A One-Hypothesis Reduction for Primes in [4n^2-n, 4n^2+n]"
+  M. M. Ross, "An Explicit Semiprime-Tail Bound in Square-Root Intervals
+  and a One-Hypothesis Reduction for Primes in [4n^2-n, 4n^2+n]"
   (Appendix A: Exact certification of the level profile).
 
 WHAT IS CERTIFIED.  For a slice p ~ N^gamma (gamma = 2-a) and sieve level
