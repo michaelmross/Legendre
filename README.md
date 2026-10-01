@@ -4,7 +4,7 @@ Computational support for:
 
 ## Reference
 
-Ross, M.M., *Eliminating the Parity Obstruction in a Quadratic Interval*, preprint, Zenodo (2026). DOI: [19986694](https://doi.org/10.5281/zenodo.19986694)
+Ross, M.M., [*Eliminating the Parity Obstruction in a Quadratic Interval*](https://doi.org/10.5281/zenodo.19207277), preprint, Zenodo (2026).
 
 More experiments in [Legendre/Hypothesis1Q](https://github.com/michaelmross/Legendre/tree/main/Hypothesis1Q).
 
