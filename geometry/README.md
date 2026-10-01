@@ -1,87 +1,60 @@
 # Factor Rays and Composite Waves
 
-Computational companion to [*Factor Rays and the Self-Conjugate Parabola: Deterministic Coverage Geometry in Square Intervals*](https://doi.org/10.5281/zenodo.20016398), Michael M. Ross (2026).
+Sources, figures, and computational diagnostics for the revised [*Factor Rays and the Self-Conjugate Parabola: Deterministic Coverage Geometry in Square Intervals*](https://doi.org/10.5281/zenodo.20016398), Michael M. Ross (2026).
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21542734-blue.svg)](https://doi.org/10.5281/zenodo.21542734)
+This version adds an exact decomposition of the nontrivial multiplication lattice into **composite waves**, together with weighted wave families and a finite Liouville parity diagnostic. The geometric identities are exact; the numerical observations concern finite averages and do not establish a prime-existence theorem.
 
-The experiments explore two exact organizations of the multiplication lattice: **factor rays**, which fix one factor, and **composite waves**, which fix a sum of factors. They illustrate deterministic coverage in square intervals, compare different interval geometries, and test signed statistics on the wave families.
-
-The geometric identities are exact. The finite parity diagnostic is empirical and does not establish a prime-existence theorem or overcome the sieve parity barrier.
+This README covers the new files. The original experiment suite can be archived separately in `v1/`, with its own README.
 
 ## Files
 
-### Original factor-ray experiments
-
 | File | Purpose |
 |---|---|
-| `factor_ray_experiments.py` | Generates experiments A–D; requires NumPy, Matplotlib, and SymPy. |
-| `exp_A_chart.png` | Factor rays, square bands, and the self-conjugate parabola. |
-| `exp_B_multiplicity.png` | Ray multiplicity across four square-band sizes. |
-| `exp_C_weights.png` | Divisibility-weight totals on the quadratic bands $J_n$. |
-| `exp_D_single_crossing.png` | Prime-ray multiplicities in $J_{500}$. |
-
-### Composite-wave companions
-
-The following files accompany the revised paper's source package. Add them to `geometry/` alongside this README to run the new diagnostics here.
-
-| File | Purpose |
-|---|---|
-| `make_figures.py` | Generates the three paper figures in PDF and PNG; requires NumPy and Matplotlib. |
+| `make_figures.py` | Generates all three paper figures in PDF and PNG; requires NumPy and Matplotlib. |
 | `wave_experiments.py` | Computes ordinary and odd-part Liouville statistics on weighted waves; requires NumPy and SciPy. |
 | `wave_parity_results.csv` | Full finite results for weights $r=1,\ldots,8$ and dyadic upper limits through $131072$. |
-| `fig1_factor_rays.pdf` / `.png` | Factor-ray geometry and the self-conjugate parabola. |
-| `fig2_band_comparison.pdf` / `.png` | Comparison of a Legendre band and a square-centered quadratic band. |
-| `fig3_composite_waves.pdf` / `.png` | Ordinary and weighted composite waves, including residue-class sampling. |
+| `fig1_factor_rays.pdf`, `fig1_factor_rays.png` | Factor rays, square bands, and the self-conjugate parabola. |
+| `fig2_band_comparison.pdf`, `fig2_band_comparison.png` | Comparison of a Legendre band and a square-centered quadratic band. |
+| `fig3_composite_waves.pdf`, `fig3_composite_waves.png` | Ordinary and weighted composite waves, including residue-class sampling. |
 
-Figure filenames retain their descriptive numbering: in the revised paper, the composite-wave figure is Figure 2 and the band-comparison figure is Figure 3.
+In the revised paper, the composite-wave figure is Figure 2 and the band-comparison figure is Figure 3. The existing descriptive filenames are retained.
 
-## Reproduce the computations
+## Reproduce the figures and diagnostic
 
 From the repository root:
 
 ```bash
 cd geometry
-python -m pip install numpy matplotlib sympy scipy
-```
-
-Run the original four experiments:
-
-```bash
-python factor_ray_experiments.py
-```
-
-Their PNG files are written to the current working directory. The script has no output-directory option; change the working directory or edit its `savefig` paths to redirect them. Experiment C's parameter list is `n_values`.
-
-With the composite-wave companion files in place, regenerate the paper figures and parity table:
-
-```bash
+python -m pip install numpy matplotlib scipy
 python make_figures.py
 python wave_experiments.py --max-s 131072 --output-dir .
 ```
 
-`make_figures.py` writes beside the script. `wave_experiments.py` writes `wave_parity_results.csv` to the directory specified by `--output-dir`. A smaller diagnostic can be run with `--max-s 2048`. Runtime depends on the chosen range and machine.
+`make_figures.py` writes PDF and PNG files beside the script. Row values increase upward; a spreadsheet with row values increasing downward reverses the visual orientation of the waves.
 
-## The geometry
+`wave_experiments.py` writes `wave_parity_results.csv` to the directory specified by `--output-dir`. For a smaller run:
 
-### Factor rays and conjugation
+```bash
+python wave_experiments.py --max-s 2048 --output-dir small_run
+```
 
-A factorization $n=kd$ gives a point $(k,n)=(k,kd)$. Fixing $d$ gives the ray
+The default run evaluates weights 1 through 8 at dyadic upper limits $2048,4096,\ldots,131072$. Runtime depends on the chosen range and machine.
 
-$$
-R_d=\{(k,dk):k\geq1\}.
-$$
+## Compile the paper
 
-Divisor conjugation exchanges the two factors:
+With a LaTeX installation, run from the directory containing `main.tex`:
 
-$$
-\sigma(k,n)=(n/k,n).
-$$
+```bash
+latexmk -pdf main.tex
+```
 
-Its fixed locus is the **self-conjugate parabola** $\Pi:n=k^2$. Each ray meets it at $(d,d^2)$, and conjugation exchanges the smaller and larger factors across it. This is reflection in the logarithmic multiplier coordinate, rather than ordinary reflection in $k$.
+Alternatively, run `pdflatex main.tex` twice. The supplied figure PDFs and `rossmeta.sty` are sufficient to compile the paper; Python execution is unnecessary unless regenerating the figures or numerical table.
 
-On the open square interval $(m^2,(m+1)^2)$, every composite has a prime factor at most $m$. A prime row is therefore a row missed by all prime rays of slopes $p\leq m$. On the closed interval, the upper endpoint can require depth $m+1$: the exception is $(m+1)^2$ when $m+1$ is prime. The entry offset of a prime ray into a square-bottomed band is $(-m^2)\bmod p$, explaining the paper's quadratic-residue restriction on offsets.
+## Composite-wave geometry
 
-### Composite waves
+In the factor-ray coordinates $(k,n)$, a factor pair $(k,d)$ is represented by $(k,kd)$. Fixing $d$ gives a straight ray; fixing the sum of the factors gives a parabola. The self-conjugate parabola $\Pi:n=k^2$ records where the two factors coincide.
+
+### Constant factor sums
 
 Fixing the factor sum $k+d=s$ gives
 
@@ -124,42 +97,6 @@ Each fixed weight gives another partition of the same nontrivial factor lattice.
 For $r=2$, even $S$ selects even columns and odd $S$ selects odd columns. The wave $S=60$ passes through row values $442,448,450,448,442$ at $k=26,28,30,32,34$. The adjacent wave $S=61$ gives $459,464,465,462$ at $k=27,29,31,33$. Its real axis is $k=30.5$, but reflection about that axis exchanges odd and even columns, explaining the asymmetric integer samples.
 
 More generally, a positive-weight line $ak+bd=S$ in factor space maps to the parabola $n=k(S-ak)/b$, subject to the corresponding integrality restrictions. This accounts for the persistent families of arcs.
-
-## What experiments A–D show
-
-### A. Factor-ray chart
-
-Plots rays of slopes $1\leq d\leq25$ through row $60$, with alternating square-band stripes, the parabola $n=k^2$, and stars at its ray intersections. Prime rows are flagged `P`.
-
-The script uses the half-open bands $[m^2,(m+1)^2)$, represented by integer rows through $(m+1)^2-1$. These differ from both the paper's closed bands and the open intervals relevant to Legendre's conjecture.
-
-### B. Multiplicity transition
-
-For $m\in\{10,30,100,300\}$, plots the exact number of multiples of each slope in the half-open square band, against $L/d$, where $L=2m+1$ is its integer row count. Small slopes contribute many points; large slopes contribute few. Slopes above $L$ contribute at most one.
-
-The marked scale $\sqrt L$ helps organize the plot. This experiment illustrates multiplicity behavior; it does not prove sharpness of a primality cutoff.
-
-### C. Divisibility-weight comparison
-
-For ten values of $n$ from $10$ through $5000$, compares $\sum 1/p$ with $\sum d_p/p^2$ on
-
-$$
-J_n=[4n^2-n,4n^2+n],\qquad L=2n+1.
-$$
-
-Here $d_p$ counts multiples of $p$ in the band. The code separates primes at $\sqrt L$ and at the integer square-root cutoff $D=\lfloor\sqrt{4n^2+n}\rfloor=2n$. The extended range $(D,L]$ contains only the candidate $2n+1$, so its prime contribution vanishes whenever that candidate is composite. This makes the geometric contrast with square bands explicit. The plotted weights are descriptive quantities, not prime probabilities.
-
-### D. The $J_{500}$ example
-
-Uses $J_{500}=[999500,1000500]$, with $L=1001$ and $D=1000$. The extended prime range $(1000,1001]$ is empty because $1001=7\cdot11\cdot13$.
-
-The medium range $\sqrt{1001}<p\leq1000$ contains 157 primes. Their multiplicities range from 1 through 27; values near the upper end of the prime range are small. The histogram therefore covers a broader range than just $\{1,2,3\}$.
-
-All multiplicities use the exact formula
-
-```python
-high // p - (low - 1) // p
-```
 
 ## Wave parity diagnostic
 
