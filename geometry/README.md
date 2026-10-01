@@ -156,4 +156,4 @@ Fluctuation sizes also contain exact repetitions: conjugate points duplicate pro
 
 The waves provide an exact geometric decomposition, including conjugation, square and pronic crests, and residue-class structure. Their signed sums reduce to familiar additive correlations. The experiments offer no demonstrated new prime-detecting mechanism.
 
-The broader coverage and parity analysis is developed in [*Multiplication Geometry in Square Shells: Finite Coverage, Truncated Legendre Sums, and the Parity Barrier*](https://doi.org/10.5281/zenodo.22553216), with companion computations in [square-shells](https://github.com/michaelmross/square-shells).
+The broader coverage and parity analysis is developed in [*Multiplication Geometry in Square Shells: Finite Coverage, Truncated Legendre Sums, and the Parity Barrier*](https://doi.org/10.5281/zenodo.22553216), with companion computations in the [square-shells](https://github.com/michaelmross/square-shells) repository.
