@@ -2,6 +2,8 @@
 
 Computational support for [*Eliminating the Parity Obstruction in a Quadratic Interval*](https://doi.org/10.5281/zenodo.19207277), Michael M. Ross (2026).
 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21542734-blue.svg)](https://doi.org/10.5281/zenodo.21542734)
+
 More experiments in [Legendre/Hypothesis1Q](https://github.com/michaelmross/Legendre/tree/main/Hypothesis1Q).
 
 This repository contains a single script:
