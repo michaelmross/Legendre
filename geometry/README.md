@@ -2,6 +2,8 @@
 
 Sources, figures, and computational diagnostics for the revised [*Factor Rays and the Self-Conjugate Parabola: Deterministic Coverage Geometry in Square Intervals*](https://doi.org/10.5281/zenodo.20016398), Michael M. Ross (2026).
 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21542734-blue.svg)](https://doi.org/10.5281/zenodo.21542734)
+
 This version adds an exact decomposition of the nontrivial multiplication lattice into **composite waves**, together with weighted wave families and a finite Liouville parity diagnostic. The geometric identities are exact; the numerical observations concern finite averages and do not establish a prime-existence theorem.
 
 This README covers the new files. The original experiment suite can be archived separately in `v1/`, with its own README.
@@ -13,9 +15,9 @@ This README covers the new files. The original experiment suite can be archived 
 | `make_figures.py` | Generates all three paper figures in PDF and PNG; requires NumPy and Matplotlib. |
 | `wave_experiments.py` | Computes ordinary and odd-part Liouville statistics on weighted waves; requires NumPy and SciPy. |
 | `wave_parity_results.csv` | Full finite results for weights $r=1,\ldots,8$ and dyadic upper limits through $131072$. |
-| `fig1_factor_rays.pdf`, `fig1_factor_rays.png` | Factor rays, square bands, and the self-conjugate parabola. |
-| `fig2_band_comparison.pdf`, `fig2_band_comparison.png` | Comparison of a Legendre band and a square-centered quadratic band. |
-| `fig3_composite_waves.pdf`, `fig3_composite_waves.png` | Ordinary and weighted composite waves, including residue-class sampling. |
+| `fig1_factor_rays.png` | Factor rays, square bands, and the self-conjugate parabola. |
+| `fig2_band_comparison.png` | Comparison of a Legendre band and a square-centered quadratic band. |
+| `fig3_composite_waves.png` | Ordinary and weighted composite waves, including residue-class sampling. |
 
 In the revised paper, the composite-wave figure is Figure 2 and the band-comparison figure is Figure 3. The existing descriptive filenames are retained.
 
