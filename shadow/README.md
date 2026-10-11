@@ -37,7 +37,7 @@ exactly.
 The script also counts
 
 $$
-H_B = \# \{(u,v) : B < u \le v, \ u,v \text{ are } B\text{-rough}, \ uv \in J_n\}.
+H_B = \text{\#} \{(u,v) : B < u \le v, \ u,v \text{ are } B\text{-rough}, \ uv \in J_n\}.
 $$
 
 Unlike $C_B$, which counts distinct shadowed integers, $H_B$ counts admissible factor pairs. Thus
