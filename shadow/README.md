@@ -62,7 +62,7 @@ $$
 
 which is the bilinear “shadow” coordinate used in the paper.
 
-## Main script
+## The script
 
 `shadow_analysis.py` is a self-contained Python script using only the standard library.
 
