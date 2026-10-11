@@ -1,7 +1,9 @@
 # Modified Legendre Sieve — Computation
 
 Scripts and data for [*A Modified Legendre Product for Primes in
-Consecutive Square Intervals*](https://doi.org/10.5281/zenodo.19410635) (Ross, M. M., 2026). Computes exact prime counts
+Consecutive Square Intervals*](https://doi.org/10.5281/zenodo.19410635) (Ross, M. M., 2026). 
+
+Computes exact prime counts
 $\pi(I_n)$ for $I_n = [n^2, (n+1)^2]$ and compares them per interval
 against three estimates, where $d = 2n+1$:
 
