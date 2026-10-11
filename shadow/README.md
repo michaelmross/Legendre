@@ -296,8 +296,8 @@ If you use these computations, please cite the accompanying paper:
 
 Michael M. Ross, *Empirical Diagnostics for the Shadow-Sieve Model in Square-Centered Intervals* (2026).
 
-Earlier versions of the paper are archived on Zenodo under DOI `10.5281/zenodo.21379172`.
+DOI `10.5281/zenodo.20358358`.
 
 ## License
 
-See the repository-level license for licensing terms.
+See the repository-level [license](https://github.com/michaelmross/Legendre/blob/main/LICENSE.md).
