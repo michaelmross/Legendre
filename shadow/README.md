@@ -292,7 +292,7 @@ does not by itself constitute progress on Legendre's conjecture: proving $\lvert
 
 ## Citation
 
-If you use these computations, please cite the accompanying paper:
+If you use this computation, please cite the accompanying paper:
 
 Michael M. Ross, *Empirical Diagnostics for the Shadow-Sieve Model in Square-Centered Intervals* (2026).
 
